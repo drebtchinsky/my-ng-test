@@ -23,9 +23,9 @@ describe(ActionDirective.name, () => {
   });
 
   it('(D) (@Output appAction) should emit with payload when ENTER key is pressed', () => {
-    // const nativeElem: HTMLElement = fixture.nativeElement;
-
-    const div: HTMLElement = fixture.debugElement.query(By.directive(ActionDirective)).nativeElement;
+    const div: HTMLElement = fixture.debugElement.query(
+      By.directive(ActionDirective)
+    ).nativeElement;
 
     const event = new KeyboardEvent('keyup', { key: 'Enter' });
     div.dispatchEvent(event);
@@ -33,9 +33,10 @@ describe(ActionDirective.name, () => {
   });
 
   it('(D) (@Output appAction) should emit with payload when clicked', () => {
-    // const nativeElem: HTMLElement = fixture.nativeElement;
+    const div: HTMLElement = fixture.debugElement.query(
+      By.directive(ActionDirective)
+    ).nativeElement;
 
-    const div: HTMLElement = fixture.debugElement.query(By.directive(ActionDirective)).nativeElement;
     div.click();
     expect(component.hasEvent()).toBeTrue();
   });

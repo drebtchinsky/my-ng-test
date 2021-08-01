@@ -56,23 +56,23 @@ describe(PhotoFrameComponent.name, () => {
     fixture.detectChanges();
     component.likes++;
     fixture.detectChanges();
-    const element: HTMLElement =
+    const counterEl: HTMLElement =
       fixture.nativeElement.querySelector('.like-counter');
-    expect(parseInt(element.textContent.trim(), 0)).toBe(1);
+    expect(parseInt(counterEl.textContent.trim(), 0)).toBe(1);
   });
 
   it(`(D) Should update aria-label when (@Input likes) is incremented`, () => {
     fixture.detectChanges();
     component.likes++;
     fixture.detectChanges();
-    const element: HTMLElement = fixture.nativeElement.querySelector('span');
-    expect(element.getAttribute('aria-label')).toBe('1: people liked');
+    const spanEl: HTMLElement = fixture.nativeElement.querySelector('span');
+    expect(spanEl.getAttribute('aria-label')).toBe('1: people liked');
   });
 
   it(`(D) Should update aria-label with 0 (@Input likes)`, () => {
     fixture.detectChanges();
-    const element: HTMLElement = fixture.nativeElement.querySelector('span');
-    expect(element.getAttribute('aria-label')).toBe('0: people liked');
+    const spanEl: HTMLElement = fixture.nativeElement.querySelector('span');
+    expect(spanEl.getAttribute('aria-label')).toBe('0: people liked');
   });
   it(`(D) Should display image with description when bound to properties`, () => {
     const description = 'some description';
