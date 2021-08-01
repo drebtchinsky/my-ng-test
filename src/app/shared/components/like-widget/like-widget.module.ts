@@ -8,8 +8,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   declarations: [LikeWidgetComponent],
   imports: [CommonModule, FontAwesomeModule],
   exports: [LikeWidgetComponent],
-  providers:[
-    UniqueIdService
-  ]
+  providers: [UniqueIdService],
 })
 export class LikeWidgetModule {}
