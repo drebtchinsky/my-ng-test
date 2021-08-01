@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
+    "test": "ng test --browsers Firefox",
+    "test-common": "ng test --browsers Chrome,Firefox",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -39,6 +40,7 @@
     "karma": "~5.1.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",
+    "karma-firefox-launcher": "^2.1.1",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
     "protractor": "~7.0.0",
