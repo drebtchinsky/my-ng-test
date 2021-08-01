@@ -1,20 +1,8 @@
 import { SimpleChange, SimpleChanges } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PhotoBoard } from './photo-board';
+import { buildPhotoList } from './build-photo-list';
 import { PhotoBoardComponent } from './photo-board.component';
 import { PhotoBoardModule } from './photo-board.module';
-
-function buildPhotoList(): PhotoBoard {
-  const photos: PhotoBoard = [];
-  for (let i = 0; i < 8; i++) {
-    photos.push({
-      id: i + 1,
-      url: '',
-      description: '',
-    });
-  }
-  return photos;
-}
 
 describe(PhotoBoardComponent.name, () => {
   let component: PhotoBoardComponent;

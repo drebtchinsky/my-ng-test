@@ -11,9 +11,7 @@ export class LikeWidgetComponent implements OnInit {
   @Output() liked = new EventEmitter<void>();
   @Input() likes = 0;
   @Input() id: string = null;
-  fonts = {
-    faThumbsUp,
-  };
+  fa = { faThumbsUp };
   constructor(private uniqueIdService: UniqueIdService) {}
 
   ngOnInit(): void {
