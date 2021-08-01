@@ -5,8 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test --browsers Firefox",
+    "test": "ng test --browsers FirefoxHeadless",
     "test-common": "ng test --browsers Chrome,Firefox",
+    "test-ci": "ng test --watch=false --browsers ChromeHeadless,FirefoxHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
