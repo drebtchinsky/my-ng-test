@@ -2,6 +2,7 @@ import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { ActionModule } from './action.module';
 import { ActionDirective } from './action.directive';
 import { Component } from '@angular/core';
+import { By } from '@angular/platform-browser';
 
 describe(ActionDirective.name, () => {
   let fixture: ComponentFixture<ActionDirectiveTestComponent> = null;
@@ -22,8 +23,9 @@ describe(ActionDirective.name, () => {
   });
 
   it('(D) (@Output appAction) should emit with payload when ENTER key is pressed', () => {
-    const nativeElem: HTMLElement = fixture.nativeElement;
-    const div: HTMLElement = nativeElem.querySelector('div');
+    // const nativeElem: HTMLElement = fixture.nativeElement;
+
+    const div: HTMLElement = fixture.debugElement.query(By.directive(ActionDirective)).nativeElement;
 
     const event = new KeyboardEvent('keyup', { key: 'Enter' });
     div.dispatchEvent(event);
@@ -31,8 +33,9 @@ describe(ActionDirective.name, () => {
   });
 
   it('(D) (@Output appAction) should emit with payload when clicked', () => {
-    const nativeElem: HTMLElement = fixture.nativeElement;
-    const div: HTMLElement = nativeElem.querySelector('div');
+    // const nativeElem: HTMLElement = fixture.nativeElement;
+
+    const div: HTMLElement = fixture.debugElement.query(By.directive(ActionDirective)).nativeElement;
     div.click();
     expect(component.hasEvent()).toBeTrue();
   });
