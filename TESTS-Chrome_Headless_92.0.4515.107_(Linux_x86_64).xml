@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome Headless 92.0.4515.107 (Linux x86_64)" package="" timestamp="2021-08-01T02:41:33" id="0" hostname="drebtch-Inspiron-3583" tests="8" errors="0" failures="0" time="0.129">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.107 Safari/537.36"/>
+  </properties>
+  <testcase name="LikeWidgetComponent #like should trigger (@Output liked) when called" time="0.089" classname="Chrome_Headless_92_0_4515_107_(Linux_x86_64).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should NOT auto-generate ID during ngOnInit when (@Input id) is assigned" time="0.012" classname="Chrome_Headless_92_0_4515_107_(Linux_x86_64).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should auto generate ID during ngOnInit when (@Input id) is not assigned" time="0.014" classname="Chrome_Headless_92_0_4515_107_(Linux_x86_64).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should create component" time="0.01" classname="Chrome_Headless_92_0_4515_107_(Linux_x86_64).LikeWidgetComponent"/>
+  <testcase name="UniqueIdService #generatedUniqueIdWithPrefix&#xA;  should be generate id when called" time="0.001" classname="Chrome_Headless_92_0_4515_107_(Linux_x86_64).UniqueIdService"/>
+  <testcase name="UniqueIdService #generatedUniqueIdWithPrefix&#xA;  should throw when called with empty" time="0.001" classname="Chrome_Headless_92_0_4515_107_(Linux_x86_64).UniqueIdService"/>
+  <testcase name="UniqueIdService #getNumberOfGeneratedIds&#xA;  should return the number of generated ids when called" time="0.002" classname="Chrome_Headless_92_0_4515_107_(Linux_x86_64).UniqueIdService"/>
+  <testcase name="UniqueIdService #generatedUniqueIdWithPrefix&#xA;  should be generate different id when call again" time="0" classname="Chrome_Headless_92_0_4515_107_(Linux_x86_64).UniqueIdService"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
