@@ -1,3 +1,4 @@
+import { PhotoFrameModule } from './shared/components/photo-frame/photo-frame.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -6,15 +7,14 @@ import { AppComponent } from './app.component';
 import { LikeWidgetModule } from './shared/components/like-widget/like-widget.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     LikeWidgetModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PhotoFrameModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
