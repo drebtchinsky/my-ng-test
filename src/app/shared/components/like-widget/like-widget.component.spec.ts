@@ -38,4 +38,39 @@ describe(LikeWidgetComponent.name, () => {
     component.like();
     expect(component.liked.emit).toHaveBeenCalled();
   });
+
+  it('(D) Should display number of likes when clicked', (done) => {
+    fixture.detectChanges();
+    const nativeElem: HTMLElement = fixture.nativeElement;
+    component.liked.subscribe(() => {
+      component.likes++;
+      fixture.detectChanges();
+      const counterElement: HTMLElement =
+        nativeElem.querySelector('.like-counter');
+      expect(counterElement.textContent.trim()).toBe('1');
+      done();
+    });
+    const likeWidgetContainerEl: HTMLElement = nativeElem.querySelector(
+      '.like-widget-container'
+    );
+    likeWidgetContainerEl.click();
+  });
+
+  it('(D) Should display number of likes when keyup enter', (done) => {
+    const nativeElem: HTMLElement = fixture.nativeElement;
+    fixture.detectChanges();
+    component.liked.subscribe(() => {
+      component.likes++;
+      fixture.detectChanges();
+      const counterElement: HTMLElement =
+        nativeElem.querySelector('.like-counter');
+      expect(counterElement.textContent.trim()).toBe('1');
+      done();
+    });
+    const likeWidgetContainerEl: HTMLElement = nativeElem.querySelector(
+      '.like-widget-container'
+    );
+    const event = new KeyboardEvent('keyup', { key: 'Enter' });
+    likeWidgetContainerEl.dispatchEvent(event);
+  });
 });
